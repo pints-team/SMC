@@ -126,6 +126,7 @@ class StochasticModelTauLeaping:
 class ParticleFilter:
     def __init__(self, model, N, measurements, neff_threshold=1/3, resampling_algo="stratified_resample", prior_cov_matrix=None, ranges=None, print_results=False):
         """
+        This class represents a particle filter. In short, computes the posterior distributions and overall likelihood for a given set of measurements and model.
         Initialising the particle filter with all the required parameters:
         model: the model, which should be either a SimpleModel (e.g. linear gaussian problems) or a StochasticModelTauLeaping (e.g. logistic growth problems)
         N: the number of particles to be generated
